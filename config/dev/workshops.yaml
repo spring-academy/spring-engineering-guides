@@ -1,0 +1,15 @@
+portals:
+  - name: "spring-engineering-dev"
+    defaults:
+      initial: 0
+      reserved: 1
+      expires: "60m"
+      orphaned: "5m"
+    sessions:
+      max: 10
+    workshops:
+    - name: spr-eng-guides-go-fast-with-spring-boot-3-1
+    - name: spr-eng-guides-hugo
+    - name: spr-eng-guides-what-is-new-spring-boot-3-2
+    - name: spr-eng-guides-restclient-httpinterfaces
+    - name: spr-eng-guides-spring-ai

@@ -1,0 +1,7 @@
+name: Spring Boot 3.2 New Features
+modules:
+  activate:
+    - 01-overview
+    - 02-restclient
+    - 03-jdbcclient
+    - 04-virtual-threads

@@ -1,0 +1,5 @@
+mode: "one_app"
+workshop_bundles:
+  - name: "spr-eng-guides"
+    url: "ghcr.io/spring-academy/spring-engineering-guides-workshop-manifests"
+    version: "latest"

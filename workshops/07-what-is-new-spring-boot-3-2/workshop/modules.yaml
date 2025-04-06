@@ -1,0 +1,13 @@
+modules:
+  01-overview:
+    name: "What's New in 3.2?"
+    exit_sign: Continue
+  02-restclient:
+    name: "Spring Boot 3.2 RestClient"
+    exit_sign: Continue
+  03-jdbcclient:
+    name: "Spring Boot 3.2 JdbcClient"
+    exit_sign: Continue
+  04-virtual-threads:
+    name: "Spring Boot 3.2 Virtual Threads"
+    exit_sign: Finish

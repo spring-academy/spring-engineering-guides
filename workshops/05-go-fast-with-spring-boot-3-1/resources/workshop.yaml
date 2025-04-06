@@ -1,0 +1,54 @@
+apiVersion: training.educates.dev/v1beta1
+kind: Workshop
+metadata:
+  name: spr-eng-guides-go-fast-with-spring-boot-3-1
+spec:
+  title: "Spring Tips: Go Fast with Spring Boot 3.1"
+  description: "This lab follows Josh Long's video and demonstrates Spring Boot 3.1 functionality."
+  workshop:
+    image: jdk17-environment:*
+    files:
+      - image: # Note: format is {repository-name}-files
+          url: $(image_repository)/spring-engineering-guides-files:$(workshop_version)
+        includePaths:
+          - /workshops/05-go-fast-with-spring-boot-3-1/workshop/**
+        newRootPath: workshops/05-go-fast-with-spring-boot-3-1
+      - path: .local/share/code-server
+        image:
+          url: ghcr.io/spring-academy/vscode-java-tools-$(platform_arch)-files:0.25.14
+      - path: exercises
+        git:
+          url: https://github.com/spring-academy/course-spring-6-boot-3-upgrade-code
+          ref: main
+        newRootPath: .
+  request:
+    parameters:
+    - name: USER_DOMAIN
+      value: "unknown.domain"
+    - name: USER_EMAIL
+      value: "somebody@unknown.domain"
+  session:
+    env:
+      - name: LESSON_LABEL
+        value: boot-3-1-start
+    namespaces:
+      budget: medium
+    resources:
+      memory: 2Gi
+    applications:
+      terminal:
+        enabled: true
+        layout: default
+      editor:
+        enabled: true
+      docker:
+        enabled: true
+        storage: 500Mi
+        socket:
+          # you must have this to enable docker ps, etc.
+          enabled: true
+    dashboards:
+      - name: Editor
+      - name: Terminal
+      - name: "🎥 Video - Spring Tips - go fast with Spring Boot 3-1"
+        url: "https://www.youtube.com/embed/ykEK2xuJrN8"

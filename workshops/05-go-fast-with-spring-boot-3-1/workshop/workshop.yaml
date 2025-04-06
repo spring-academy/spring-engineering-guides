@@ -1,0 +1,7 @@
+name: "Spring Tips: Go Fast with Spring Boot 3.1"
+modules:
+  activate:
+    - 01-overview
+    - 02-boot-docker-compose
+    - 03-boot-devtools-compile
+    - 04-boot-test-containers
