@@ -1,0 +1,8 @@
+DIR_LAB               = lab
+NAME                  = spring-engineering-guides
+IMAGE_SOURCE          = https://github.com/spring-academy/spring-engineering-guides
+CONTAINER_REGISTRY    = ghcr.io/spring-academy/
+CONTAINER_REPOSITORY  = spring-engineering-guides
+version               = latest
+
+env                   = github
